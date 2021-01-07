@@ -1,0 +1,6 @@
+[submodule "nvcomp"]
+	path = nvcomp
+	url = https://github.com/NVIDIA/nvcomp
+[submodule "cub"]
+	path = cub
+	url = https://github.com/NVIDIA/cub
