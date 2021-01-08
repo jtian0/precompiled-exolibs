@@ -1,0 +1,11 @@
+--- ../nvcomp1.2/src/CMakeLists.txt	2021-01-07 17:16:27.000000000 -0600
++++ CMakeLists.txt	2021-01-07 17:21:53.000000000 -0600
+@@ -10,7 +10,7 @@
+ file(GLOB CUDA_SOURCES *.cu)
+ file(GLOB CPP_SOURCES *.cpp)
+ 
+-add_library(nvcomp SHARED ${CUDA_SOURCES} ${CPP_SOURCES})
++add_library(nvcomp STATIC ${CUDA_SOURCES} ${CPP_SOURCES})
+ set_property(TARGET nvcomp PROPERTY CUDA_ARCHITECTURES ${GPU_ARCHS})
+ target_compile_options(nvcomp PRIVATE
+     $<$<COMPILE_LANGUAGE:CUDA>:--expt-extended-lambda -Xcompiler -pthread>)
